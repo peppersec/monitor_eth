@@ -19,8 +19,8 @@ async function main() {
                 text: `https://etherscan.io/address/${ADDRESS} balance is below ${THRESHOLD} ETH. \nit's ${fromWei(balance.toString(10))}`
             }) // body data type must match "Content-Type" header
         });
-        console.log('resp', response)
     }
+    console.log('resp', response)
 }
 
 main()
