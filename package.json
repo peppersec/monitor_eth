@@ -1,0 +1,16 @@
+{
+  "name": "monitor_chainlink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "node-fetch": "^2.6.0",
+    "web3": "^1.2.1"
+  }
+}
