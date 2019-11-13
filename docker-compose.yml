@@ -1,0 +1,13 @@
+version: "2.2"
+
+services:
+  monitor:
+    image: peppersec/monitor_eth
+    environment:
+      # How to create bot: https://core.telegram.org/bots#3-how-do-i-create-a-bot
+      # How to get chat id: https://stackoverflow.com/questions/32423837/telegram-bot-how-to-get-a-group-chat-id/32572159#32572159
+      TELEGRAM_NOTIFIER_BOT_TOKEN: 
+      TELEGRAM_NOTIFIER_CHAT_ID: 
+      ADDRESS: '0x1B36E154C15a1568E3a23fa0C702807B19B988f2'
+      THRESHOLD: 1
+      INTERVAL: 300
