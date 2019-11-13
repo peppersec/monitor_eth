@@ -1,8 +1,10 @@
-FROM node:alpine
+FROM node:10
 
-WORKDIR /monitor_eth
-ADD . .
+WORKDIR /usr/src/app
 
-RUN npm install
+COPY package.json package-lock.json /usr/src/app/
+RUN npm install && npm cache clean --force
+COPY . /usr/src/app
 
-CMD ["node", "index.js"]
+HEALTHCHECK CMD ["npm", "run", "healthcheck"]
+CMD ["npm", "run", "start"]
