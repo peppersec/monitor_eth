@@ -1,10 +1,7 @@
-FROM node:10
-
+FROM node:11
 WORKDIR /usr/src/app
-
-COPY package.json package-lock.json /usr/src/app/
-RUN npm install && npm cache clean --force
-COPY . /usr/src/app
-
+COPY package.json package-lock.json ./
+RUN npm ci --no-cache
+COPY . .
 HEALTHCHECK CMD ["npm", "run", "healthcheck"]
 CMD ["npm", "run", "start"]
