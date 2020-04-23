@@ -26,7 +26,7 @@ async function main() {
                     text: `https://${BLOCK_EXPLORER}/address/${ADDRESS} balance is below ${THRESHOLD} ETH. \nit's ${fromWei(balance)}`
                 }) // body data type must match 'Content-Type' header
             })
-            console.log('resp', response)
+            console.log('resp', await response.json())
         } else {
             console.log('everything is ok', `${ADDRESS} balance is ${fromWei(balance)}`)
         }
